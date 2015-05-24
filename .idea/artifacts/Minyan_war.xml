@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Minyan:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Minyan.war">
+      <element id="artifact" artifact-name="Minyan:war exploded" />
+    </root>
+  </artifact>
+</component>
