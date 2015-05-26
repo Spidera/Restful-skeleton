@@ -2,12 +2,33 @@
   <artifact type="exploded-war" name="Services:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/Services_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="Services/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Services" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.1.6.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: Minyan:Controllers:1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: Minyan:Persistence:1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc-portlet:4.1.6.RELEASE" />
+        </element>
       </element>
+      <element id="javaee-facet-resources" facet="Services/web/Web" />
     </root>
   </artifact>
 </component>

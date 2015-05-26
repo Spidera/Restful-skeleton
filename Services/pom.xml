@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Minyan</artifactId>
+        <groupId>dov.projects</groupId>
+        <version>${Minyan.version}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>war</packaging>
+    <version>${Minyan.version}</version>
+    <artifactId>Services</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>web/WEB-INF/web.xml</webXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>Minyan</groupId>
+            <artifactId>Controllers</artifactId>
+            <version>${Minyan.version}</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>Minyan</groupId>
+            <artifactId>Persistence</artifactId>
+            <version>${Minyan.version}</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+</project>
