@@ -24,19 +24,19 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>Minyan</groupId>
-            <artifactId>Controllers</artifactId>
-            <version>${Minyan.version}</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>Minyan</groupId>
-            <artifactId>Persistence</artifactId>
-            <version>${Minyan.version}</version>
-            <type>jar</type>
-        </dependency>
-    </dependencies>
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>Minyan</groupId>-->
+            <!--<artifactId>Controllers</artifactId>-->
+            <!--<version>${Minyan.version}</version>-->
+            <!--<type>jar</type>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>Minyan</groupId>-->
+            <!--<artifactId>Persistence</artifactId>-->
+            <!--<version>${Minyan.version}</version>-->
+            <!--<type>jar</type>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
 
 </project>
