@@ -3,10 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Controllers/Controllers.iml" filepath="$PROJECT_DIR$/Controllers/Controllers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data/Data.iml" filepath="$PROJECT_DIR$/Data/Data.iml" />
       <module fileurl="file://$PROJECT_DIR$/Minyan.iml" filepath="$PROJECT_DIR$/Minyan.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Persistence/Persistence.iml" filepath="$PROJECT_DIR$/Persistence/Persistence.iml" />
       <module fileurl="file://$PROJECT_DIR$/Services/Services.iml" filepath="$PROJECT_DIR$/Services/Services.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Views/Views.iml" filepath="$PROJECT_DIR$/Views/Views.iml" />
     </modules>
   </component>
 </project>

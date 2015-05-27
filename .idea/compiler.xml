@@ -23,12 +23,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="Controllers" />
+        <module name="Data" />
+        <module name="Persistence" />
         <module name="Services" />
-        <module name="Views" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Controllers" target="1.5" />
+      <module name="Data" target="1.5" />
       <module name="Minyan" target="1.5" />
       <module name="Persistence" target="1.5" />
       <module name="Services" target="1.5" />

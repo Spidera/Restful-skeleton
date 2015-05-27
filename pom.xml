@@ -6,12 +6,11 @@
     <packaging>pom</packaging>
     <version>${Minyan.version}</version>
     <modules>
-        <module>Persistence</module>
-        <module>Services</module>
-        <module>Controllers</module>
-        <module>Views</module>
+        <module>data</module>
+        <module>services</module>
+        <module>controllers</module>
     </modules>
-    <name>Minyan application</name>
+    <name>minyan-application-root</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
@@ -139,58 +138,6 @@
             <version>${spring-framework.version}</version>
             <scope>test</scope>
         </dependency>
-
-
-        <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>${spring-data-jpa.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-commons</artifactId>
-            <version>${spring-data-commons.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate.javax.persistence</groupId>
-            <artifactId>hibernate-jpa-2.0-api</artifactId>
-            <version>${hibernate-jpa-2.0-api.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate-entitymanager.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>${json.version}</version>
-        </dependency>
-
-        <!-- DB Choices -->
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-            <version>${hsqldb.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-        </dependency>
-
-
     </dependencies>
 
 
@@ -203,7 +150,7 @@
         <spring-framework.version>4.1.6.RELEASE</spring-framework.version>
         <jstl.version>1.2</jstl.version>
         <spring-data-jpa.version>1.8.0.RELEASE</spring-data-jpa.version>
-        <hibernate-jpa-2.0-api.version>1.0.1.Final</hibernate-jpa-2.0-api.version>
+        <hibernate-jpa-2.1-api.version>1.0.0.Final</hibernate-jpa-2.1-api.version>
         <hibernate-entitymanager.version>4.3.10.Final</hibernate-entitymanager.version>
         <hsqldb.version>2.2.9</hsqldb.version>
         <json.version>20141113</json.version>
