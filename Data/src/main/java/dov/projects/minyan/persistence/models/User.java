@@ -2,20 +2,27 @@ package dov.projects.minyan.persistence.models;
 
 import javax.persistence.*;
 
-@Entity(name = "account")
+@Entity//(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id")
     private Long id;
 
     @Basic
-    private String firstName;
+    @Column(name = "given_name")
+    private String givenName;
 
     @Basic
-    private String lastName;
+    @Column(name = "family_name")
+    private String familyName;
 
     @Basic
+    @Column(name = "email_address")
     private String email;
+
+    @Basic
+    private String password;
 
     public Long getId() {
         return id;
@@ -25,20 +32,20 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getGivenName() {
+        return givenName;
     }
 
-    public void setFirstName(String name) {
-        this.firstName = name;
+    public void setGivenName(String name) {
+        this.givenName = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getFamilyName() {
+        return familyName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setFamilyName(String lastName) {
+        this.familyName = lastName;
     }
 
     public String getEmail() {
@@ -47,5 +54,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

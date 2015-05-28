@@ -15,7 +15,7 @@
     <jpa:repositories base-package="dov.projects.minyan.persistence.models"/>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
-        <property name="persistenceUnitName" value="defaultPersistenceUnitPersistence"/>
+        <property name="persistenceUnitName" value="mysqlPersistenceUnit"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">

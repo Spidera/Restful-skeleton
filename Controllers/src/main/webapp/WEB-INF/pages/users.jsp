@@ -11,8 +11,8 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<c:url value="/css/bootstrap.css" />" rel="stylesheet">
+    <link href="<c:url value="/css/bootstrap-responsive.css" />" rel="stylesheet">
 </head>
 
 <body>
@@ -23,21 +23,27 @@
             <h1>Users</h1>
             <form:form method="post" action="add" commandName="user" class="form-horizontal">
             <div class="control-group">
-                <form:label cssClass="control-label" path="firstName">First Name:</form:label>
+                <form:label cssClass="control-label" path="givenName">First Name:</form:label>
                 <div class="controls">
-                    <form:input path="firstName"/>
+                    <form:input path="givenName"/>
                 </div>
             </div>
             <div class="control-group">
-                <form:label cssClass="control-label" path="lastName">Last Name:</form:label>
+                <form:label cssClass="control-label" path="familyName">Last Name:</form:label>
                 <div class="controls">
-                    <form:input path="lastName"/>
+                    <form:input path="familyName"/>
                 </div>
             </div>
             <div class="control-group">
                 <form:label cssClass="control-label" path="email">Email:</form:label>
                 <div class="controls">
                     <form:input path="email"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <form:label cssClass="control-label" path="password">Password:</form:label>
+                <div class="controls">
+                    <form:password path="password"/>
                 </div>
             </div>
             <div class="control-group">
@@ -60,7 +66,7 @@
                     <tbody>
                     <c:forEach items="${users}" var="user">
                         <tr>
-                            <td>${user.lastName}, ${user.firstName}</td>
+                            <td>${user.familyName}, ${user.givenName}</td>
                             <td>${user.email}</td>
                             <td>
                                 <form action="delete/${user.id}" method="post"><input type="submit"
