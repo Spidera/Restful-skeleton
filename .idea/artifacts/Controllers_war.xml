@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Controllers:war">
+    <output-path>$PROJECT_DIR$/Controllers/target</output-path>
+    <root id="archive" name="Minyan-Controllers.war">
+      <element id="artifact" artifact-name="Controllers:war exploded" />
+    </root>
+  </artifact>
+</component>

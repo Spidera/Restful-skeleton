@@ -1,5 +1,7 @@
-#all files under target
+#all files under target and out
 /*/target/**
 /out/**
-/.idea/**
-**/*.iml
+
+#project
+workspace.xml
+tasks.xml
