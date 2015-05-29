@@ -2,14 +2,14 @@ package dov.projects.minyan.controllers;
 
 import dov.projects.minyan.persistence.models.User;
 import dov.projects.minyan.persistence.models.UserRepository;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
@@ -37,5 +37,21 @@ public class UserController {
         userRepository.delete(userRepository.findOne(userId));
 
         return "redirect:/";
+    }
+
+    @RequestMapping(value = "/api/users", method = RequestMethod.GET)
+    @ResponseBody
+    public String listUsersJson(ModelMap model) throws JSONException {
+        JSONArray userArray = new JSONArray();
+        for (User user : userRepository.findAll()) {
+            JSONObject userJSON = new JSONObject();
+            userJSON.put("id", user.getId());
+            userJSON.put("firstName", user.getGivenName());
+            userJSON.put("lastName", user.getFamilyName());
+            userJSON.put("email", user.getEmail());
+            userJSON.put("password", user.getPassword());
+            userArray.put(userJSON);
+        }
+        return userArray.toString();
     }
 }

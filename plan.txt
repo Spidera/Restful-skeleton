@@ -1,0 +1,11 @@
+RESEARCH
+--------
+*. Finish IntelliJ-SpringMVC tutorial (https://confluence.jetbrains.com/display/IntelliJIDEA/Getting+Started+with+Spring+MVC%2C+Hibernate+and+JSON)
+*. Read/go through Spring-REST tutorial
+*. Read Hibernate tutorial (?)
+*. Transform the application to be RESTful
+
+
+WORK
+----
+*. Work: add Minyan DB

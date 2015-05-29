@@ -153,7 +153,7 @@
         <hibernate-jpa-2.1-api.version>1.0.0.Final</hibernate-jpa-2.1-api.version>
         <hibernate-entitymanager.version>4.3.10.Final</hibernate-entitymanager.version>
         <hsqldb.version>2.2.9</hsqldb.version>
-        <json.version>20141113</json.version>
+        <json.version>20140107</json.version>
         <mysql-connector-java.version>5.1.35</mysql-connector-java.version>
         <spring-data-commons.version>1.10.0.RELEASE</spring-data-commons.version>
     </properties>
