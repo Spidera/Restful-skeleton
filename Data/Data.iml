@@ -13,6 +13,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
+          <factory-entry name="hsqldbPersistenceUnit" />
           <factory-entry name="mysqlPersistenceUnit" value="0c09cb7a-2889-47ac-94b2-cadab6e09796" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

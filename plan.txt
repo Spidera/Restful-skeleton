@@ -1,11 +1,15 @@
-RESEARCH
+Research
 --------
-*. Finish IntelliJ-SpringMVC tutorial (https://confluence.jetbrains.com/display/IntelliJIDEA/Getting+Started+with+Spring+MVC%2C+Hibernate+and+JSON)
-*. Read/go through Spring-REST tutorial
-*. Read Hibernate tutorial (?)
-*. Transform the application to be RESTful
+* Read Hibernate tutorial (?)
+* Transform the application to be RESTful (?)
 
 
-WORK
-----
-*. Work: add Minyan DB
+User stories
+------------
+* Create a Minyan page containing a map on right side, form on left side
+* The Minyan form should contain:
+    a. 'Minyan' title
+    b. 'coordinates' field
+    c. 'Minyan creator' combo box
+    d. 'save' button
+    e. 'cancel' button
