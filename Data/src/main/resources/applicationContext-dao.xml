@@ -10,12 +10,14 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="dov.projects.minyan.persistence.models"/>
+    <!-- @Repository / models scanning -->
+    <context:component-scan base-package="dov.projects.restfulskeleton.dao"/>
 
-    <jpa:repositories base-package="dov.projects.minyan.persistence.models"/>
+    <jpa:repositories base-package="dov.projects.restfulskeleton.dao"/>
 
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceUnitName" value="mysqlPersistenceUnit"/>
+        <property name="packagesToScan" value="dov.projects.restfulskeleton.model"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">

@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - minyanDb@localhost" uuid="0c09cb7a-2889-47ac-94b2-cadab6e09796">
+  <data-source name="MySQL - @localhost" uuid="5d55cfe7-18fa-4700-8274-0175414ca4f9">
     <database-info product="MySQL" version="5.6.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
-    <schema name="" catalog="minyanDb"/>
-    <table name="user" schema="" catalog="minyanDb" type="TABLE">
-      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="given_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
-      <column name="family_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
-      <column name="email_address" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
-      <column name="password" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="user_id"/>
+    <schema name="" catalog="TaskManager"/>
+    <table name="category" schema="" catalog="TaskManager" type="TABLE">
+      <column name="Id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ParentId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="Description" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Id"/>
+    </table>
+    <table name="task" schema="" catalog="TaskManager" type="TABLE">
+      <column name="Id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Name" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ParentId" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="CategoryId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Details" sqlType="VARCHAR" precision="10000" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Id"/>
     </table>
   </data-source>
 </component>

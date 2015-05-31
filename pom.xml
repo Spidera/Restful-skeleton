@@ -1,17 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>dov.projects</groupId>
-    <artifactId>Minyan</artifactId>
+    <groupId>dov.projects.restful</groupId>
+    <artifactId>restful-skeleton</artifactId>
     <packaging>pom</packaging>
-    <version>${Minyan.version}</version>
+    <version>${Restful-Skeleton.version}</version>
     <modules>
-        <module>data</module>
-        <module>services</module>
-        <module>controllers</module>
+        <module>Data</module>
+        <module>Services</module>
+        <module>Controllers</module>
+        <module>WebClient</module>
     </modules>
-    <name>minyan-application-root</name>
-    <url>http://maven.apache.org</url>
+    <name>restful-skeleton-root</name>
 
     <dependencies>
         <!-- SPRING -->
@@ -142,11 +142,11 @@
 
 
     <build>
-        <finalName>Minyan</finalName>
+        <finalName>RestfulSkeleton</finalName>
     </build>
 
     <properties>
-        <Minyan.version>1.0-SNAPSHOT</Minyan.version>
+        <Restful-Skeleton.version>1.0</Restful-Skeleton.version>
         <spring-framework.version>4.1.6.RELEASE</spring-framework.version>
         <jstl.version>1.2</jstl.version>
         <spring-data-jpa.version>1.8.0.RELEASE</spring-data-jpa.version>
@@ -156,6 +156,10 @@
         <json.version>20140107</json.version>
         <mysql-connector-java.version>5.1.35</mysql-connector-java.version>
         <spring-data-commons.version>1.10.0.RELEASE</spring-data-commons.version>
+
+        <!-- Encoding default properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
 </project>

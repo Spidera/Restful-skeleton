@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - minyanDb@localhost" uuid="0c09cb7a-2889-47ac-94b2-cadab6e09796">
+    <data-source name="MySQL - @localhost" uuid="5d55cfe7-18fa-4700-8274-0175414ca4f9">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>minyanDb.*</schema-pattern>
+      <schema-pattern>TaskManager.*</schema-pattern>
       <default-schemas>TaskManager.*</default-schemas>
     </data-source>
   </component>

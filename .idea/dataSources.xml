@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml">
-    <data-source source="LOCAL" name="MySQL - minyanDb@localhost" uuid="0c09cb7a-2889-47ac-94b2-cadab6e09796">
+  <component name="DataSourceManagerImpl" format="xml" hash="1190033198">
+    <data-source source="LOCAL" name="MySQL - @localhost" uuid="5d55cfe7-18fa-4700-8274-0175414ca4f9">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/minyanDb</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

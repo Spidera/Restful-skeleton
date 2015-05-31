@@ -1,8 +1,8 @@
-package dov.projects.minyan.persistence.models;
+package dov.projects.restfulskeleton.model;
 
 import javax.persistence.*;
 
-@Entity//(name = "user")
+@Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

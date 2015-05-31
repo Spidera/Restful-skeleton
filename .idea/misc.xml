@@ -14,6 +14,9 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Data/Dao/pom.xml" />
+        <option value="$PROJECT_DIR$/Data/Hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/Data/Models/pom.xml" />
         <option value="$PROJECT_DIR$/Views/pom.xml" />
       </set>
     </option>

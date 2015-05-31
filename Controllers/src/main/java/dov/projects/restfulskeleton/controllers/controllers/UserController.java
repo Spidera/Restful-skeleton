@@ -1,7 +1,7 @@
-package dov.projects.minyan.controllers;
+package dov.projects.restfulskeleton.controllers.controllers;
 
-import dov.projects.minyan.persistence.models.User;
-import dov.projects.minyan.persistence.models.UserRepository;
+import dov.projects.restfulskeleton.dao.UserRepository;
+import dov.projects.restfulskeleton.model.User;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -3,18 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>Minyan</artifactId>
-        <groupId>dov.projects</groupId>
-        <version>${Minyan.version}</version>
+        <artifactId>restful-skeleton</artifactId>
+        <groupId>dov.projects.restful</groupId>
+        <version>${Restful-Skeleton.version}</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
-    <version>${Minyan.version}</version>
+    <version>${Restful-Skeleton.version}</version>
     <artifactId>controllers</artifactId>
 
     <build>
-        <finalName>Minyan-Controllers</finalName>
+        <finalName>Restful-Skeleton-Controllers</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -27,12 +27,14 @@
     </build>
 
     <dependencies>
+        <!-- Models & DAO module dependency -->
         <dependency>
-            <groupId>dov.projects</groupId>
+            <groupId>dov.projects.restful</groupId>
             <artifactId>data</artifactId>
-            <version>${Minyan.version}</version>
+            <version>${Restful-Skeleton.version}</version>
         </dependency>
 
+        <!-- -->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
@@ -49,7 +51,4 @@
             <version>4.1.6.RELEASE</version>
         </dependency>
     </dependencies>
-
-
-
 </project>

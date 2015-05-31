@@ -1,1 +1,1 @@
-# minyan
+# restful skeleton
