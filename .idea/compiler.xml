@@ -24,6 +24,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Controllers" />
+        <module name="Data" />
         <module name="Persistence" />
         <module name="Services" />
         <module name="WebClient" />
