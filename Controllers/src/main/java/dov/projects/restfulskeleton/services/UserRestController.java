@@ -2,7 +2,7 @@ package dov.projects.restfulskeleton.services;
 
 import dov.projects.restfulskeleton.dao.UserRepository;
 import dov.projects.restfulskeleton.model.User;
-import dov.projects.restfulskeleton.services.errorhandling.UserNotFoundException;
+import dov.projects.restfulskeleton.services.errorhandling.exception.UserNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -38,7 +38,7 @@ public class UserRestController {
                 .fromCurrentRequest().path("/{id}")
                 .buildAndExpand(result.getId()).toUri());
 
-        return new ResponseEntity<User>(null, httpHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
@@ -46,7 +46,7 @@ public class UserRestController {
         validateUser(userId);
         userRepository.delete(userRepository.findOne(userId));
 
-        return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     private void validateUser(Long userId) {
