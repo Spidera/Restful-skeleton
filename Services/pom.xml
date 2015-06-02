@@ -16,7 +16,6 @@
             <groupId>dov.projects.restful</groupId>
             <artifactId>data</artifactId>
             <version>${Restful-Skeleton.version}</version>
-            <!--<type>pom</type>-->
         </dependency>
     </dependencies>
 </project>

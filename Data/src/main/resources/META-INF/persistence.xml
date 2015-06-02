@@ -22,6 +22,8 @@
             <!--<property name="hibernate.hbm2ddl.auto" value="create-drop"/>-->
         </properties>
     </persistence-unit>
+
+
     <persistence-unit name="hsqldbPersistenceUnit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
