@@ -1,6 +1,6 @@
-package dov.projects.restfulskeleton.services.errorhandling;
+package dov.projects.restfulskeleton.controllers.errorhandling;
 
-import dov.projects.restfulskeleton.services.errorhandling.exception.UserNotFoundException;
+import dov.projects.restfulskeleton.controllers.errorhandling.exception.UserNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.web.bind.annotation.ControllerAdvice;

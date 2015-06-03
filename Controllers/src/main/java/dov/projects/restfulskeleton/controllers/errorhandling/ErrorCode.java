@@ -1,4 +1,4 @@
-package dov.projects.restfulskeleton.services.errorhandling;
+package dov.projects.restfulskeleton.controllers.errorhandling;
 
 public enum ErrorCode {
     UNSPECIFIED_GENERIC_EXCEPTION(1),

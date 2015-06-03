@@ -1,4 +1,4 @@
-package dov.projects.restfulskeleton.services.errorhandling.exception;
+package dov.projects.restfulskeleton.controllers.errorhandling.exception;
 
 public class UserNotFoundException extends RuntimeException {
 
