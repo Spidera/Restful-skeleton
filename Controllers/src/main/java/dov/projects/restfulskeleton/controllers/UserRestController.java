@@ -38,7 +38,7 @@ public class UserRestController {
                 .fromCurrentRequest().path("/{id}")
                 .buildAndExpand(result.getId()).toUri());
 
-        return new ResponseEntity<User>(null, httpHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<User>(result, httpHeaders, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
@@ -53,9 +53,5 @@ public class UserRestController {
         if (!userRepository.exists(userId)) {
             throw new UserNotFoundException(userId);
         }
-    }
-
-    public void setUserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
     }
 }

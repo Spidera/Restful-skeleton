@@ -12,19 +12,16 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
-    @Basic
-    @Column(name = "given_name")
+    @Column(name = "given_name", nullable = false, length = 50)
     private String givenName;
 
-    @Basic
-    @Column(name = "family_name")
+    @Column(name = "family_name", length = 50)
     private String familyName;
 
-    @Basic
-    @Column(name = "email_address")
+    @Column(name = "email_address", unique = true, nullable = false, length = 50)
     private String email;
 
-    @Basic
+    @Column(nullable = false, length = 10)
     private String password;
 
     public Long getId() {
@@ -65,5 +62,28 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        if (!givenName.equals(user.givenName)) return false;
+        if (familyName != null ? !familyName.equals(user.familyName) : user.familyName != null) return false;
+        if (!email.equals(user.email)) return false;
+        return password.equals(user.password);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = givenName.hashCode();
+        result = 31 * result + (familyName != null ? familyName.hashCode() : 0);
+        result = 31 * result + email.hashCode();
+        result = 31 * result + password.hashCode();
+        return result;
     }
 }

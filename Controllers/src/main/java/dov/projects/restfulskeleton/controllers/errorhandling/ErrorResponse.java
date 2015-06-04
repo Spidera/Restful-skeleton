@@ -29,25 +29,4 @@ public class ErrorResponse {
     public void setMessage(String message) {
         this.message = message;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ErrorResponse)) return false;
-
-        ErrorResponse that = (ErrorResponse) o;
-
-        if (status != that.status) return false;
-        if (code != that.code) return false;
-        return !(message != null ? !message.equals(that.message) : that.message != null);
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = status;
-        result = 31 * result + code;
-        result = 31 * result + (message != null ? message.hashCode() : 0);
-        return result;
-    }
 }

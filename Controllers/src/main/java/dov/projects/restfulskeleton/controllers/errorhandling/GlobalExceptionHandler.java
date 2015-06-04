@@ -1,26 +1,42 @@
 package dov.projects.restfulskeleton.controllers.errorhandling;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dov.projects.restfulskeleton.controllers.errorhandling.exception.UserNotFoundException;
+import dov.projects.restfulskeleton.model.User;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.orm.jpa.JpaSystemException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+
 @ControllerAdvice
 @ResponseBody
 public class GlobalExceptionHandler {
 
+
     @ExceptionHandler(JpaSystemException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorResponse handleJpaSystemException(Exception ex) {
-        String message = ((JpaSystemException) ex).getRootCause().getMessage();
-        if (message.contains("Data too long for column 'password' at row 1")) {
-            return createErrorResponse(message, HttpStatus.BAD_REQUEST, ErrorCode.DATA_TOO_LONG_FOR_PASSWORD);
-        } else {
-            return createErrorResponse(message, HttpStatus.BAD_REQUEST, ErrorCode.UNSPECIFIED_JPA_EXCEPTION);
+    public ResponseEntity<ErrorResponse> handleJpaSystemException(Exception ex, HttpServletRequest httpServletRequest) {
+        String rootCauseMessage = ((JpaSystemException) ex).getRootCause().getMessage();
+        if (rootCauseMessage.contains("violation: unique") && rootCauseMessage.contains("table: USER")) {
+            try {
+                String message = "User with email '" +
+                        new ObjectMapper().readValue(httpServletRequest.getReader().readLine(), User.class).getEmail() +
+                        "' already exists";
+                return new ResponseEntity<ErrorResponse>(
+                        createErrorResponse(message, HttpStatus.CONFLICT, ErrorCode.USER_EXISTS),
+                        HttpStatus.CONFLICT);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+        return new ResponseEntity<ErrorResponse>(
+                createErrorResponse(rootCauseMessage, HttpStatus.BAD_REQUEST, ErrorCode.JPA_EXCEPTION),
+                HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(Exception.class)
