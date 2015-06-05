@@ -20,4 +20,5 @@
 
     <import resource="classpath*:/applicationContext-dao.xml"/>
     <import resource="classpath*:/applicationContext-services.xml"/>
+    <import resource="classpath:/securityContext.xml"/>
 </beans>

@@ -30,13 +30,7 @@
         <module name="WebClient" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7">
-      <module name="Controllers" target="1.5" />
-      <module name="Data" target="1.7" />
-      <module name="RestfulSkeleton" target="1.7" />
-      <module name="Services" target="1.5" />
-      <module name="WebClient" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7" />
   </component>
   <component name="JavacSettings">
     <option name="MAXIMUM_HEAP_SIZE" value="256" />

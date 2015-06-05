@@ -120,6 +120,19 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring-security-web.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring-security-web.version}</version>
+        </dependency>
+
+
         <!-- Jackson2: Core, which includes Streaming API, shared low-level abstractions (but NOT data-binding) -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -190,6 +203,9 @@
         <!-- Main project version -->
         <Restful-Skeleton.version>1.0</Restful-Skeleton.version>
 
+        <!-- Java version -->
+        <java.version>1.7</java.version>
+
         <!-- Encoding default properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -201,6 +217,7 @@
         <spring-framework.version>4.1.6.RELEASE</spring-framework.version>
         <spring-data-jpa.version>1.8.0.RELEASE</spring-data-jpa.version>
         <spring-data-commons.version>1.10.0.RELEASE</spring-data-commons.version>
+        <spring-security-web.version>4.0.1.RELEASE</spring-security-web.version>
         <mysql-connector-java.version>5.1.35</mysql-connector-java.version>
         <hibernate-jpa-2.1-api.version>1.0.0.Final</hibernate-jpa-2.1-api.version>
         <hibernate-entitymanager.version>4.3.10.Final</hibernate-entitymanager.version>

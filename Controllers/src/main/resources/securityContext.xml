@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+
+    <!-- enable annotation security -->
+    <global-method-security pre-post-annotations="enabled"/>
+
+    <http entry-point-ref="customAuthenticationEntryPoint" create-session="stateless">
+        <!-- put here all the roles for logging authentication-->
+        <intercept-url pattern="/services/api/auth/**" access="hasAuthority('ROLE_ADMIN')"/>
+        <intercept-url pattern="/**" access="hasAuthority('ROLE_ADMIN')"/>
+
+        <custom-filter ref="customAuthenticationFilter" position="BASIC_AUTH_FILTER"/>
+        <custom-filter ref="customLogoutFilter" position="LOGOUT_FILTER"/>
+    </http>
+
+    <!-- Customized Basic auth. filter -->
+    <beans:bean id="customAuthenticationFilter"
+                class="org.springframework.security.web.authentication.www.BasicAuthenticationFilter">
+        <beans:constructor-arg ref="authenticationManager"/>
+        <beans:constructor-arg ref="customAuthenticationEntryPoint"/>
+    </beans:bean>
+
+    <!-- Customized logout filter -->
+    <beans:bean id="customLogoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        <beans:constructor-arg name="logoutSuccessHandler" ref="customLogoutSuccessHandler"/>
+        <beans:constructor-arg name="handlers" ref="securityContextLogoutHandler"/>
+    </beans:bean>
+
+    <beans:bean id="customLogoutSuccessHandler"
+                class="dov.projects.restfulskeleton.security.CustomLogoutSuccessHandler"/>
+    <beans:bean id="securityContextLogoutHandler"
+                class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+    <beans:bean id="customAuthenticationEntryPoint"
+                class="dov.projects.restfulskeleton.security.CustomAuthenticationEntryPoint"/>
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider>
+            <user-service>
+                <user name="admin" password="1234" authorities="ROLE_ADMIN"/>
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+</beans:beans>
