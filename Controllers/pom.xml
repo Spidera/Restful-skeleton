@@ -39,7 +39,7 @@
             <version>${Restful-Skeleton.version}</version>
         </dependency>
 
-        <!-- -->
+
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
